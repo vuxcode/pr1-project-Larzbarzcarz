@@ -1,0 +1,77 @@
+<script>
+// starting point
+var role = prompt("Welcome to your adventure, to explore these lands. And what are you? A Wizard?, A knight?, A rouge?");
+
+// The user chooses there class
+var rpgclass = ["Wizard", "Knight", "Rouge",];
+
+var rpgclass0 = rpgclass[0];
+var rpgclass1 = rpgclass[1];
+var rpgclass2 = rpgclass[2];
+
+switch (role) {
+    case rpgclass0:
+        document.write("Oh you are a spell slinger are you?, I wish you the best on your travels,");
+        break;
+    case rpgclass1:
+        document.write("Ah so you are a big walking tin can, let's hope that armor will defend you in combat,");
+        break;
+    case rpgclass2:
+        document.write("So you are a walking shadow, dealing with your foes with the element of surprise");
+        break;
+    default:
+        document.write("You didn't choose one of the options, oh well.");
+        break;
+}
+
+console.log(role); 
+
+
+
+var path = prompt("Now you are at a cross roads, which way will you go? left, right, or straight?");
+
+switch (path) {
+    case "left":
+        document.write("You've decided to take the path on the left, beware of the goblins!");
+        break;
+    case "right":
+        document.write("You've decided to take the path on the right, watch out for the spiders!");
+        break;
+    case "straight":
+        document.write("You've decided to take the path straight, don't worry the dragons are sleeping!");
+        break;
+    default:
+        document.write("You didn't choose one of the options, oh well.");
+        break;
+}
+
+var hp = 100;
+
+while (hp > 0){
+    var enemy = prompt("You've encountered a enemy, what will you do? run, fight, or try to reason with them?");
+
+    switch (enemy) {
+        case "fight":
+            var damage = Math.floor(Math.random() * 10) + 1;
+            hp = hp - damage;
+            document.write("You've taken " + damage + " damage!");
+            document.write("Your current HP is " + hp);
+            break;
+        case "run":
+            document.write("You've decided to run, you manage to escape!");
+            break;
+        case "reason":
+            document.write("You've tried to reason with the enemy, but they just attack you anyway!");
+            break;
+        default:
+            document.write("You didn't choose one of the options, oh well.");
+            break;
+    }
+    if (hp <= 0){
+        document.write("You've died, try again next time!");
+        break;
+    }
+}
+
+
+</script>
