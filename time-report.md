@@ -7,3 +7,7 @@
 >
 > 2022-11-21
 > 1 and a half hour coding, in the classroom. (added a secound path, with diffrent scenarios and random numbers to create the random outcomes to effect the players outcome)
+
+2022-11-25 
+1 and half hour coding in the class room.
+Fixed the issues from 21,s polished up the code, removed switch cases, and modfied strings.
