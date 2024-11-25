@@ -1,132 +1,115 @@
 <script>
-// starting point
-var role = prompt("Welcome to your adventure, to explore these lands. And what are you? A Wizard?, A knight?, A rouge?");
-
-// The user chooses there class
-var rpgclass = ["Wizard", "Knight", "Rouge",];
-
-var rpgclass0 = rpgclass[0];
-var rpgclass1 = rpgclass[1];
-var rpgclass2 = rpgclass[2];
-
-switch (role) {
-    case rpgclass0:
-        document.write("Oh you are a spell slinger are you?, I wish you the best on your travels,");
-        break;
-    case rpgclass1:
-        document.write("Ah so you are a big walking tin can, let's hope that armor will defend you in combat,");
-        break;
-    case rpgclass2:
-        document.write("So you are a walking shadow, dealing with your foes with the element of surprise");
-        break;
-    default:
-        document.write("You didn't choose one of the options, oh well.");
-        break;
-}
-
-console.log(role); 
-
-
-
-var path = prompt("Now you are at a cross roads, which way will you go? left, right, or straight?");
-
-switch (path) {
-    case "left":
-        document.write("You've decided to take the path on the left, beware of the goblins!");
-        break;
-    case "right":
-        document.write("You've decided to take the path on the right, watch out for the spiders!");
-        break;
-    case "straight":
-        document.write("You've decided to take the path straight, don't worry the dragons are sleeping!");
-        break;
-    default:
-        document.write("You didn't choose one of the options, oh well.");
-        break;
-}
-
-var hp = 100;
-// Combat scenario
-while (hp > 0){
-    var enemy = prompt("You've encountered a enemy, what will you do? run, fight, or try to reason with them?");
-
-    switch (enemy) {
-        case "fight":
-            var damage = Math.floor(Math.random() * 10) + 1;
-            hp = hp - damage;
-            document.write("You've taken " + damage + " damage!");
-            document.write("Your current HP is " + hp);
+    // starting point
+    var role = prompt("Welcome to your adventure, to explore these lands. And what are you? A Wizard?, A knight?, A rouge?");
+    
+    // The user chooses there class
+    var rpgclass = ["Wizard", "Knight", "Rouge",];
+    
+    var rpgclass0 = rpgclass[0];
+    var rpgclass1 = rpgclass[1];
+    var rpgclass2 = rpgclass[2];
+    
+    switch (role) {
+        case rpgclass0:
+            document.write("Oh you are a spell slinger are you?, I wish you the best on your travels,");
             break;
-        case "run":
-            document.write("You've decided to run, you manage to escape!");
+        case rpgclass1:
+            document.write("Ah so you are a big walking tin can, let's hope that armor will defend you in combat,");
             break;
-        case "reason":
-            document.write("You've tried to reason with the enemy, but they just attack you anyway!");
+        case rpgclass2:
+            document.write("So you are a walking shadow, dealing with your foes with the element of surprise");
             break;
         default:
             document.write("You didn't choose one of the options, oh well.");
             break;
     }
-    if (hp <= 0){
-        document.write("You've died, try again next time!");
-        break;
-    }
-}
-// Direction after first combat.
-var path1 = prompt("Where are you gonna go now?")
-var pathinput = 
-     if else (path1 == left/right){
-var random = Math.random ();
-var max = 3
-var outcome = Math.floor(max*random);
-}
-if else
-    if (outcome == 1);{
-    document.write ("This is a dead end, you would have to go back")
-}
-    if (outcome == 2){
-    document.write ("You ran in to a room filled with goblins");
-    var choice = prompt("fight or run away?")
-    var inputchoice =
-    if else(inputchoice == run/fight)
+    
+    console.log(role); 
+    
+    
+    
+    var path = prompt("Now you are at a cross roads, which way will you go? left, right, or straight?");
+    
+    if (path == "left") {
+            document.write("You've decided to take the path on the left, beware of the goblins!");}
+    if (path == "right"){
+            document.write("You've decided to take the path on the right, watch out for the spiders!");}
+    if (path == "straight"){
+            document.write("You've decided to take the path straight, don't worry the dragons are sleeping!");}
+    else {
+        document.write("You didn't choose one of the options, oh well.");}
+            
+    
+    
+    //var hp = 100;
+    // Combat scenario
+    //while (hp > 0){
+        var enemy = prompt("You've encountered a enemy, what will you do? run, fight, or try to reason with them?");
+    
+        if (enemy == "fight") {
+                var damage = Math.floor(Math.random() * 10) + 1;
+                hp = hp - damage;
+                document.write("You've taken " + damage + " damage!");
+                document.write("Your current HP is " + hp);}
+            
+        if (enemy == "run"){
+                document.write("You've decided to run, you manage to escape!");}
         
-    }
-    if (outcome == 3) {
-    document.write ("You walked in to a room filled with tresure");
-    // a small possible combat scenario with tresure guardians
-    var random = Math.random();
-    var max = 100
-    var suprise = Math.floor(random/max)
-    if else suprise = (100>=suprise)
-    var suprisecombat = prompt("Suprise attack by skeletons guarding the tresure");
-
-    else (100<=suprise)
-    var lootsucc = prompt ("No one noticed you looting away, you take your tresure. and walk to the next path)
-    
-    }
-                    }
-else{
-(pathinput == NaN)
-return pathinput
-}
-//secound path
-var path2 = ("What direction do you wanna take now?");
-var pathinput2 = 
-    if else (path2 == forward/left); {
-var random = Math.random ();
-var max = 3
-var outcome = (max*number)
-
-    
-    
-
-
-    
-    
+        if  (enemy == "reason"){
+                document.write("You've tried to reason with the enemy, but they just attack you anyway!");}
+          else {
+                document.write("You didn't choose one of the options, oh well.");
+             }
+        //if (hp <= 0){
+            //document.write("You've died, try again next time!");
     
         
-
     
-
-
-</script>
+    // Direction after first combat.
+    var path1 = prompt("Where are you gonna go now?")
+    //var pathinput = 
+    if (path1 == left||right){
+    
+    var random = Math.random ()
+    var max = 3
+    var outcome = Math.floor(max*random)}
+    else(Return (path1));{
+    
+    }
+    ifelse
+        if (outcome == 1);{
+        document.write ("This is a dead end, you would have to go back")
+    }
+        if (outcome == 2){
+        document.write ("You ran in to a room filled with goblins");
+        var choice = prompt("fight or run away?")
+        var inputchoice =
+        ifelse(inputchoice == run/fight)
+            
+        }
+        if (outcome == 3) {
+        document.write ("You walked in to a room filled with tresure");
+        // a small possible combat scenario with tresure guardians
+        var random = Math.random();
+        var max = 100
+        var suprise = Math.floor(random/max)
+        if (100>=suprise)
+        var suprisecombat = prompt("Suprise attack by skeletons guarding the tresure");
+    
+        else (100<=suprise)
+        var lootsucc = prompt ("No one noticed you looting away, you take your tresure. and walk to the next path")
+        
+        }
+                        
+    {
+    
+    }
+    //secound path
+    var path2 = ("What direction do you wanna take now?");
+    var pathinput2 = 
+        ifelse (path2 == forward/left); {
+    var random = Math.random ();
+    var max = 3
+    var outcome = (max*number)
+        }
+   </script>
