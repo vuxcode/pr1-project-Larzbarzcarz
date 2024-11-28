@@ -3,13 +3,13 @@
     var role = prompt("Welcome to your adventure, to explore these lands. And what are you? A Wizard?, A knight?, A rouge?");
     
     // The user chooses there class
-    var rpgclass = ["Wizard", "Knight", "Rouge",];
-    
+    var rpgclass = ["WIZARD", "KNIGHT", "ROUGE",];
+    //solving the uppercase scenario
     var rpgclass0 = rpgclass[0];
     var rpgclass1 = rpgclass[1];
     var rpgclass2 = rpgclass[2];
     
-    switch (role) {
+    switch (role.toUpperCase()) {
         case rpgclass0:
             document.write("Oh you are a spell slinger are you?, I wish you the best on your travels,");
             break;
@@ -19,38 +19,48 @@
         case rpgclass2:
             document.write("So you are a walking shadow, dealing with your foes with the element of surprise");
             break;
-        default:
+        default: 
             document.write("You didn't choose one of the options, oh well.");
             break;
     }
     
-    console.log(role); 
+    console.log(role.toUpperCase()); 
     
     
     
     var path = prompt("Now you are at a cross roads, which way will you go? left, right, or straight?");
-    
+    path = path.toLowerCase()
     if (path == "left") {
             document.write("You've decided to take the path on the left, beware of the goblins!");}
-    if (path == "right"){
+    else if (path == "right"){
             document.write("You've decided to take the path on the right, watch out for the spiders!");}
-    if (path == "straight"){
+    else if (path == "straight"){
             document.write("You've decided to take the path straight, don't worry the dragons are sleeping!");}
     else {
         document.write("You didn't choose one of the options, oh well.");}
             
     
     
-    //var hp = 100;
-    // Combat scenario
+    var hp = 100;
+     //Combat scenario
     //while (hp > 0){
         var enemy = prompt("You've encountered a enemy, what will you do? run, fight, or try to reason with them?");
     
         if (enemy == "fight") {
+            var combat = prompt("You went the fighting path are you gonna strike or defend?")}
+            if (combat == "defend"){
+            var dodge = Math.floor(Math.random()*100)+1
+            if (dodge <= 100)
                 var damage = Math.floor(Math.random() * 10) + 1;
                 hp = hp - damage;
                 document.write("You've taken " + damage + " damage!");
-                document.write("Your current HP is " + hp);}
+                document.write("Your current HP is " + hp);
+            if (dodge => 100)
+            var strike = Math.floor(Math.random()*200)+1}
+            if (strike => 150)
+            //var critical = prompt ("you dealt a critical hit on your enemys")
+            
+        
             
         if (enemy == "run"){
                 document.write("You've decided to run, you manage to escape!");}
