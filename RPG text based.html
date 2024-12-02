@@ -44,49 +44,56 @@
     var hp = 100;
      //Combat scenario
     //while (hp > 0){
-        var enemy = prompt("You've encountered a enemy, what will you do? run, fight, or try to reason with them?");
+
+    // START THE FUNCTION HERE!
+
+        var enemy = prompt("You've encountered a enemy, what will you do? run or fight,");
     
         if (enemy == "fight") {
             var combat = prompt("You went the fighting path are you gonna strike or defend?")}
             if (combat == "defend"){
-            var dodge = Math.floor(Math.random()*100)+1
-            if (dodge <= 100)
+            var dodge = Math.floor(Math.random()*100)+1}
+            if (dodge <= 100){
                 var damage = Math.floor(Math.random() * 10) + 1;
                 hp = hp - damage;
                 document.write("You've taken " + damage + " damage!");
                 document.write("Your current HP is " + hp);
-            if (dodge => 100)
-            var strike = Math.floor(Math.random()*200)+1}
-            if (strike => 150)
-            //var critical = prompt ("you dealt a critical hit on your enemys")
+            }
+                else { (hp <= 10) 
+                document.write ("you died from the critical hit from your enemy");}
+            if (dodge => 100){
+            var strike = Math.floor(Math.random()*200)+1
+            if (strike => 150);}
+        
             
+            //var critical = prompt ("you dealt a critical hit on your enemys")
+           
         
             
         if (enemy == "run"){
                 document.write("You've decided to run, you manage to escape!");}
-        
-        if  (enemy == "reason"){
-                document.write("You've tried to reason with the enemy, but they just attack you anyway!");}
+    
           else {
                 document.write("You didn't choose one of the options, oh well.");
+               
              }
+    // END THE FUNCTION HERE!
         //if (hp <= 0){
             //document.write("You've died, try again next time!");
     
         
     
     // Direction after first combat.
-    var path1 = prompt("Where are you gonna go now?")
-    //var pathinput = 
-    if (path1 == left||right){
-    
+    var path1 = prompt("Where are you gonna go now? left or right?")
+    if (path1 == "right"){
+    if (path1 == "left")
     var random = Math.random ()
     var max = 3
     var outcome = Math.floor(max*random)}
-    else(Return (path1));{
+    //else(Return (path1));{
     
-    }
-    ifelse
+    
+    
         if (outcome == 1);{
         document.write ("This is a dead end, you would have to go back")
     }
@@ -95,31 +102,46 @@
         var choice = prompt("fight or run away?")
         var inputchoice =
         ifelse(inputchoice == run/fight)
-            
+    console.log(hp)       
         }
         if (outcome == 3) {
-        document.write ("You walked in to a room filled with tresure");
+        document.write ("You walked in to a room filled with tresure are you gonna loot it or sneak away");}
         // a small possible combat scenario with tresure guardians
+        if ("loot")
         var random = Math.random();
         var max = 100
         var suprise = Math.floor(random/max)
-        if (100>=suprise)
+        if (100<=suprise);
+        document.write ("You where able to loot it without any disturbence")
+        if (100>=suprise);
         var suprisecombat = prompt("Suprise attack by skeletons guarding the tresure");
+        var tresurecombat = prompt("what will you do to fight these skeletons Fight?, Dodge?, Run away?,")
+        if (tresurecombat == "combat")
+        var combat = Math.random();
+        var maxdamage = 150
+        var combatoutcome = Math.floor(combat/maxdamage)
+        if (combatoutcome == 150)
+        document.write = ("critical hit you destroyed those skeletons in one hit")
+        if (combatoutcome => 100)
+        document.write ("You delt" + combatoutcome + "to your enemy")
+        if (combatoutcome <=10)
+        document.write ("you missed, the enemy laughs at you")
     
-        else (100<=suprise)
-        var lootsucc = prompt ("No one noticed you looting away, you take your tresure. and walk to the next path")
+    
+       
         
-        }
                         
     {
     
     }
     //secound path
-    var path2 = ("What direction do you wanna take now?");
+    var path2 = ("What direction do you wanna take now?");{
     var pathinput2 = 
-        ifelse (path2 == forward/left); {
+     (pathinput2 == "left")
+      (pathinput2 == "right")
+     }   
     var random = Math.random ();
     var max = 3
     var outcome = (max*number)
-        }
+
    </script>
