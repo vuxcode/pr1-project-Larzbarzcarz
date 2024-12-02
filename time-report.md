@@ -15,3 +15,7 @@ Fixed the issues from 21,s polished up the code, removed switch cases, and modfi
 2022-11-28
 got combat working, needing to add a return to finish combat. and game over incase the enemy damage is too high. 
 and upper/lower case on role and path to fool proof it. 
+
+2022-12-02
+combat more finetuned. got the outcomes working, and needing to add more combat choices.
+and get return working in regards to combat.
