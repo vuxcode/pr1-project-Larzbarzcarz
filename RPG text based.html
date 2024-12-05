@@ -114,34 +114,96 @@
         if (100<=suprise);
         document.write ("You where able to loot it without any disturbence")
         if (100>=suprise);
-        var suprisecombat = prompt("Suprise attack by skeletons guarding the tresure");
-        var tresurecombat = prompt("what will you do to fight these skeletons Fight?, Dodge?, Run away?,")
-        if (tresurecombat == "combat")
-        var combat = Math.random();
-        var maxdamage = 150
-        var combatoutcome = Math.floor(combat/maxdamage)
-        if (combatoutcome == 150)
-        document.write = ("critical hit you destroyed those skeletons in one hit")
-        if (combatoutcome => 100)
-        document.write ("You delt" + combatoutcome + "to your enemy")
-        if (combatoutcome <=10)
-        document.write ("you missed, the enemy laughs at you")
+       // var suprisecombat = prompt("Suprise attack by skeletons guarding the tresure");
+        //var tresurecombat = prompt("what will you do to fight these skeletons Fight?, Dodge?, Run away?,")
+        //if (tresurecombat == "combat")
+        //var combat = Math.random();
+        //var maxdamage = 150
+        //var combatoutcome = Math.floor(combat/maxdamage)
+        //if (combatoutcome == 150)
+        //document.write = ("critical hit you destroyed those skeletons in one hit")
+        //if (combatoutcome => 100)
+        //document.write ("You delt" + combatoutcome + "to your enemy")
+        //if (combatoutcome <=10)
+        //document.write ("you missed, the enemy laughs at you")
     
     
        
         
                         
-    {
     
-    }
+    
+// chapters = [1,2,3,4] with a true/false on the combat/run options
+
+
+//Chapter 3
+
     //secound path
-    var path2 = ("What direction do you wanna take now?");{
-    var pathinput2 = 
-     (pathinput2 == "left")
-      (pathinput2 == "right")
+    var path2 = ("What direction do you wanna take now? left or right?");{
+    (path2 == "left")
+    (path2 == "right")
      }   
     var random = Math.random ();
     var max = 3
-    var outcome = (max*number)
+    var outcome = (max*random)
+
+    var moments = (outcome == 1)
+    var testing = prompt("this is to just test that one outcome works")
+    //Combat 
+ 
+    var moments = (outcome == 2)
+    //tresure
+    var pannycake = prompt ("this is secound test")
+    //if (Chapter [1,2] =false)
+    //var dragonnecklace = prompt("You find a shiny necklace in the tresure pile do you take it or not?")
+    //dragonnecklace = (true)
+    //if chapter [1,2] = true var lifenecklace = prompt ("you find a green glowing necklace do you take it or not?") lifenecklace = true
+
+    //Swamp outcome
+    var moments = (outcome == 3)
+    var swamp = prompt("Oh no you landed in the foggy swamp crawling with foes, do you charge in or sneak past it?")
+    if (swamp == "Sneak");
+    var sneak = Math.floor(Math.random()*100)
+    if (sneak <=100)
+    var swampfight1 = prompt("You dident sneak past the swamp creatures they heard you. and they are charging you for a fight!")
+    //combatscenario
+
+    if(sneak => 50)
+    var sneaking = prompt("You sucessfully went past the swamp creatures")
+    
+    if (swamp == "charge")
+    var charge = Math.floor(Math.random()*200)
+    if(charge => 150)
+    var criticalhit = prompt("Well done, Your charge did a critical hit on your foe killing them in one swipe")
+    if(charge <= 150)
+    var lowerchance = prompt("Well you dident get lucky this time, Be ready for combat")
+
+    //Chapters and true/false if its possible to be done before december 10th otherwise remove,
+
+//Chapter 4
+var chapter4 = prompt("you walk in to a old acient tomb that has one massive bridge that only have 2 directions forward or left?")
+(chapter4 == "forward")
+(chapter4 == "left")
+var randomoutcomes = Math.floor();
+var max = 4
+var bridgeway = (randomoutcomes*max)
+if (bridgeway == 1);
+//combat
+
+if (bridgeway == 2);
+//a pit of spikes = death, if (lifenecklace = true) = var saved ("You flash up before going that way as you survived death but your necklace vanished returning to the bridge again") (return impement)
+//if (lifenecklace = false), var death = prompt("you fell in to a pit of spikes dieing instently")
+
+if (bridgeway == 3);
+var ending = prompt("you went through several paths slayed several foes and finally reached your ending point, Thanks for playing my adventure")
+
+if (bridgeway == 4)
+var deadend = prompt("another dead end, you are gonna have to walk back to the bridge")
+//return function to the chapter4.
+
+
+
+
+
 
    </script>
