@@ -19,3 +19,7 @@ and upper/lower case on role and path to fool proof it.
 2022-12-02
 combat more finetuned. got the outcomes working, and needing to add more combat choices.
 and get return working in regards to combat.
+
+2022-12-05
+Implemented more to the third chapter,
+and started on chapter 4. and starting to brew on the chapter array, and good and evil outcome (if its possible before december 10th.
