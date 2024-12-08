@@ -11,37 +11,118 @@
     
     switch (role.toUpperCase()) {
         case rpgclass0:
-            document.write("Oh you are a spell slinger are you?, I wish you the best on your travels,");
+            alert("Oh you are a spell slinger are you?, I wish you the best on your travels,");
             break;
         case rpgclass1:
-            document.write("Ah so you are a big walking tin can, let's hope that armor will defend you in combat,");
+            alert("Ah so you are a big walking tin can, let's hope that armor will defend you in combat,");
             break;
         case rpgclass2:
-            document.write("So you are a walking shadow, dealing with your foes with the element of surprise");
+            alert("So you are a walking shadow, dealing with your foes with the element of surprise");
             break;
         default: 
-            document.write("You didn't choose one of the options, oh well.");
+            alert("You didn't choose one of the options, oh well.");
             break;
     }
     
     console.log(role.toUpperCase()); 
     
+  // Combat Function
+    // Handles the combat sequence with enemies, including randomized enemy HP, fighting, and running actions. Includes debug options for easier testing.
+    function combatScenario() {
+        var hp = 100;
+        var enemyHp =  Math.floor(Math.random() * 50) + 20; // Random enemy HP for variety or debug low HP
+        
+        while (hp > 0 && enemyHp > 0) {
+            var action = prompt("You've encountered an enemy! What will you do? (fight/run)").toLowerCase();
+            if (action === "run") {
+                var escapeChance = debugMode ? 100 : Math.floor(Math.random() * 100) + 1;
+                if (escapeChance > 30) {
+                    alert("You've decided to run, and you manage to escape!<br>");
+                    return; // Successfully escape
+                } else {
+                    alert("You tried to run, but the enemy caught up!<br>");
+                }
+            } else if (action === "fight") {
+                var combatAction = prompt("Are you going to strike or defend?").toLowerCase();
+                if (combatAction === "strike") {
+                    var damage =  Math.floor(Math.random() * 20) + 1;
+                    enemyHp -= damage;
+                    alert("You dealt " + damage + " damage to the enemy. Enemy HP: " + enemyHp + "<br>");
+                } else if (combatAction === "defend") {
+                    var dodgeChance = debugMode ? 100 : Math.floor(Math.random() * 100) + 1;
+                    if (dodgeChance > 50) {
+                        alert("You successfully dodged the attack!<br>");
+                    } else {
+                        var damage = Math.floor(Math.random() * 10) + 1;
+                        hp -= damage;
+                        alert("You failed to dodge and took " + damage + " damage! Your HP: " + hp + "<br>");
+                    }
+                } else {
+                    alert("Invalid action. The enemy attacks you while you hesitate!<br>");
+                    var damage = Math.floor(Math.random() * 10) + 1;
+                    hp -= damage;
+                    alert("You took " + damage + " damage! Your HP: " + hp + "<br>");
+                }
+            } else {
+            alert("Invalid choice. You stand still, and the enemy seizes the opportunity to attack!<br>");
+                var damage = Math.floor(Math.random() * 10) + 1;
+                hp -= damage;
+                alert("You took " + damage + " damage! Your HP: " + hp + "<br>");
+            }
+
+            // Check if combat should continue
+            if (enemyHp <= 0) {
+                alert("You've defeated the enemy! Congratulations!<br>");
+                // Call findTreasure function after defeating the enemy
+                return; // Continue the adventure after defeating the enemy
+            } else if (hp <= 0) {
+                alert("You've died. Try again next time!<br>");
+                break;
+            }
+        }
+    }
+
+  // Treasure Scenario Function
+    // Handles the treasure scenario, including options to loot or sneak away, with risks like traps, damage, or enemy encounters.
+    function treasureScenario() {
+        var choice = prompt("Do you want to loot the treasure or sneak away? (loot/sneak)").toLowerCase();
+        if (choice === "loot") {
+            var outcome = Math.floor(Math.random() * 100) + 1;
+            if (outcome <= 20) {
+                alert("As you try to loot, a trap activates and you take massive damage! You die instantly.<br>");
+            } else if (outcome <= 60) {
+                alert("You manage to loot some of the treasure, but you trigger a minor trap and take damage.<br>");
+                var damage = Math.floor(Math.random() * 20) + 1;
+                alert("You took " + damage + " damage while looting!<br>");
+            } else if (outcome <= 90) {
+                alert("You successfully loot the treasure without any trouble!<br>");
+            } else {
+                alert("As you try to loot, a group of skeletons suddenly emerges to protect their treasure!<br>");
+                combatScenario();
+            }
+        } else if (choice === "sneak") {
+            alert("You decided to sneak away quietly, leaving the treasure behind.<br>");
+        } else {
+            alert("Invalid choice. You hesitate, and decide to leave the treasure behind.<br>");
+        }
+    }
+
     
     
     var path = prompt("Now you are at a cross roads, which way will you go? left, right, or straight?");
     path = path.toLowerCase()
     if (path == "left") {
-            document.write("You've decided to take the path on the left, beware of the goblins!");}
+            alert("You've decided to take the path on the left, beware of the goblins!");}
     else if (path == "right"){
-            document.write("You've decided to take the path on the right, watch out for the spiders!");}
+            alert("You've decided to take the path on the right, watch out for the spiders!");}
     else if (path == "straight"){
-            document.write("You've decided to take the path straight, don't worry the dragons are sleeping!");}
+            alert("You've decided to take the path straight, don't worry the dragons are sleeping!");}
     else {
-        document.write("You didn't choose one of the options, oh well.");}
+        alert("You didn't choose one of the options, oh well.");}
             
     
     
-    var hp = 100;
+    //var hp = 100;
      //Combat scenario
     //while (hp > 0){
 
@@ -49,21 +130,9 @@
 
         var enemy = prompt("You've encountered a enemy, what will you do? run or fight,");
     
-        if (enemy == "fight") {
-            var combat = prompt("You went the fighting path are you gonna strike or defend?")}
-            if (combat == "defend"){
-            var dodge = Math.floor(Math.random()*100)+1}
-            if (dodge <= 100){
-                var damage = Math.floor(Math.random() * 10) + 1;
-                hp = hp - damage;
-                document.write("You've taken " + damage + " damage!");
-                document.write("Your current HP is " + hp);
-            }
-                else { (hp <= 10) 
-                document.write ("you died from the critical hit from your enemy");}
-            if (dodge => 100){
-            var strike = Math.floor(Math.random()*200)+1
-            if (strike => 150);}
+        if (enemy == "fight")
+                combatScenario();
+
         
             
             //var critical = prompt ("you dealt a critical hit on your enemys")
@@ -71,15 +140,24 @@
         
             
         if (enemy == "run"){
-                document.write("You've decided to run, you manage to escape!");}
+            var escapeChance = Math.floor(Math.random() * 100) + 1;
+            if (escapeChance > 30 ){
+                alert("You've decided to run, you manage to escape!");
+                }
+                else {
+                alert ("enemy caught up!");
+                combatScenario();
+                }
+            }
+               
     
           else {
-                document.write("You didn't choose one of the options, oh well.");
+                alert("You didn't choose one of the options, oh well.");
                
              }
     // END THE FUNCTION HERE!
         //if (hp <= 0){
-            //document.write("You've died, try again next time!");
+            //alert("You've died, try again next time!");
     
         
     
@@ -95,38 +173,31 @@
     
     
         if (outcome == 1);{
-        document.write ("This is a dead end, you would have to go back")
+        alert ("This is a dead end, you would have to go back")
     }
         if (outcome == 2){
-        document.write ("You ran in to a room filled with goblins");
+        alert ("You ran in to a room filled with goblins");
         var choice = prompt("fight or run away?")
-        var inputchoice =
-        ifelse(inputchoice == run/fight)
-    console.log(hp)       
-        }
-        if (outcome == 3) {
-        document.write ("You walked in to a room filled with tresure are you gonna loot it or sneak away");}
+        if (choice == "fight")
+        combatScenario();
+        if (choice == "run")
+        var escape
+        alert ("You walked in to a room filled with tresure are you gonna loot it or sneak away");}
         // a small possible combat scenario with tresure guardians
         if ("loot")
         var random = Math.random();
         var max = 100
         var suprise = Math.floor(random/max)
         if (100<=suprise);
-        document.write ("You where able to loot it without any disturbence")
+        treasureScenario();
         if (100>=suprise);
-       // var suprisecombat = prompt("Suprise attack by skeletons guarding the tresure");
-        //var tresurecombat = prompt("what will you do to fight these skeletons Fight?, Dodge?, Run away?,")
-        //if (tresurecombat == "combat")
-        //var combat = Math.random();
-        //var maxdamage = 150
-        //var combatoutcome = Math.floor(combat/maxdamage)
-        //if (combatoutcome == 150)
-        //document.write = ("critical hit you destroyed those skeletons in one hit")
-        //if (combatoutcome => 100)
-        //document.write ("You delt" + combatoutcome + "to your enemy")
-        //if (combatoutcome <=10)
-        //document.write ("you missed, the enemy laughs at you")
-    
+        combatScenarioscenario
+       
+    if("sneak")
+    alert("you decided to sneak away leaving the tresure behind")
+else ("You didn't choose one of the options, oh well.");
+
+
     
        
         
@@ -140,15 +211,16 @@
 
     //secound path
     var path2 = ("What direction do you wanna take now? left or right?");{
-    (path2 == "left")
-    (path2 == "right")
+    (path2 == "left");
+    (path2 == "right");
      }   
     var random = Math.random ();
     var max = 3
     var outcome = (max*random)
 
     var moments = (outcome == 1)
-    var testing = prompt("this is to just test that one outcome works")
+    var testing = prompt("You ran in to a group of goblins, time for another fight")
+    combatScenario();
     //Combat 
  
     var moments = (outcome == 2)
@@ -188,7 +260,7 @@ var randomoutcomes = Math.floor();
 var max = 4
 var bridgeway = (randomoutcomes*max)
 if (bridgeway == 1);
-//combat
+combatScenario();
 
 if (bridgeway == 2);
 //a pit of spikes = death, if (lifenecklace = true) = var saved ("You flash up before going that way as you survived death but your necklace vanished returning to the bridge again") (return impement)
@@ -199,6 +271,7 @@ var ending = prompt("you went through several paths slayed several foes and fina
 
 if (bridgeway == 4)
 var deadend = prompt("another dead end, you are gonna have to walk back to the bridge")
+return chapter4
 //return function to the chapter4.
 
 
