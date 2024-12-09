@@ -30,7 +30,7 @@
     // Handles the combat sequence with enemies, including randomized enemy HP, fighting, and running actions.
     function combatScenario() {
         var hp = 100;
-        var enemyHp =  Math.floor(Math.random() * 50) + 20; // Random enemy HP for variety or debug low HP
+        var enemyHp =  Math.floor(Math.random() * 50) + 20; // Random enemy HP for variety 
         
         while (hp > 0 && enemyHp > 0) {
             var action = prompt("You've encountered an enemy! What will you do? (fight/run)").toLowerCase();
@@ -49,7 +49,7 @@
                     enemyHp -= damage;
                     alert("You dealt " + damage + " damage to the enemy. Enemy HP: " + enemyHp + "<br>");
                 } else if (combatAction === "defend") {
-                    var dodgeChance = debugMode ? 100 : Math.floor(Math.random() * 100) + 1;
+                    var dodgeChance =  Math.floor(Math.random() * 100) + 1;
                     if (dodgeChance > 50) {
                         alert("You successfully dodged the attack!<br>");
                     } else {
@@ -286,4 +286,5 @@ alert("thanks for playing my game, ")
 
 
    </script>
+
 
