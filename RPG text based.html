@@ -177,7 +177,8 @@
         if (choice == "fight")
         combatScenario();
         if (choice == "run")
-        var escape
+        
+        if (outcome == 3);
         alert ("You walked in to a room filled with tresure are you gonna loot it or sneak away");}
         // a small possible combat scenario with tresure guardians
         if ("loot")
@@ -188,8 +189,7 @@
         treasureScenario();
         if (100>=suprise);
         combatScenario();
-       
-    if("sneak")
+       if("sneak")
     alert("you decided to sneak away leaving the tresure behind")
 else ("You didn't choose one of the options, oh well.");
 
@@ -232,29 +232,27 @@ else ("You didn't choose one of the options, oh well.");
     //Swamp outcome
     var moments = (outcome == 3)
     var swamp = prompt("Oh no you landed in the foggy swamp crawling with foes, do you charge in or sneak past it?")
-    if (swamp == "Sneak");
-    var sneak = Math.floor(Math.random()*100)
-    if (sneak <=100)
-    var swampfight1 = prompt("You dident sneak past the swamp creatures they heard you. and they are charging you for a fight!")
+    if (swamp == "Sneak");{
+        var sneak = Math.floor(Math.random()*100)
+        if (sneak <=100)
+        var swampfight1 = alert("You dident sneak past the swamp creatures they heard you. and they are charging you for a fight!")
     combatScenario();
-    //combatscenario
-
     if(sneak => 50)
-    var sneaking = prompt("You sucessfully went past the swamp creatures")
-    
+    var sneaking = alert("You sucessfully went past the swamp creatures")}
     if (swamp == "charge")
     var charge = Math.floor(Math.random()*200)
     if(charge => 150)
-    var criticalhit = prompt("Well done, Your charge did a critical hit on your foe killing them in one swipe")
+    var criticalhit = alert("Well done, Your charge did a critical hit on your foe killing them in one swipe")
     if(charge <= 150)
-    var lowerchance = prompt("Well you dident get lucky this time, Be ready for combat")
+    var lowerchance = alert("Well you dident get lucky this time, Be ready for combat")
     combatScenario();
+   
 
     //Chapters and true/false if its possible to be done before december 10th otherwise remove,
 
 //Chapter 4
 var path4 = prompt("you walk in to a old acient tomb that has one massive bridge that only have 2 directions right or left?")
-if (path4 == "left")
+if (path4 == "left");
 if (path4 == "right")
 var randomoutcomes = Math.floor();
 var max = 3
@@ -286,5 +284,7 @@ alert("thanks for playing my game, ")
 
 
    </script>
+
+
 
 
