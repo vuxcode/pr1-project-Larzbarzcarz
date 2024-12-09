@@ -13,8 +13,17 @@ The final program is not the goal! The aim of the project is to show how you hav
 
 # Project Summary
 
-> Before the final submission date you should include a "PROJECT SUMMARY" in this section here. 
+A text based adventure that allows you to pick 3 classes, Wizard. Knight, Rouge.
+that allows you to pick how you want to play. as much combat as possible or a peaceful option by running away. 
+
+What was my experiences during the time coding?
+Well i learned to optimise the code.
+Experienced a bit of a feature creep, 
+And realising that i was overthinking the more simpler aspects. 
+
+If i had more time, 
+I would be able to implement images, Buttons, a karma system depending on if you fight alot or not. with certain scenarios that unlocks depending on how you play.
+adding a vendor that allows you to buy or sell equipment. gear exklusive to the role you play as. and special dialoge to that class. 
 
 # User Guide
-
-> Write a clear user guide for how someone should use your program.
+Well its just simple as writing the code words of every step. that being role, and then the actions of what you wanna do. as in looting, running. fighting. or even charging in to combat.
