@@ -23,3 +23,7 @@ and get return working in regards to combat.
 2022-12-05
 Implemented more to the third chapter,
 and started on chapter 4. and starting to brew on the chapter array, and good and evil outcome (if its possible before december 10th.
+
+2022-12-08
+2 hours.
+Implemented the combat scenario and tresure scenario. swapped all docuement write to alert to highlight the user results of there own actions.
