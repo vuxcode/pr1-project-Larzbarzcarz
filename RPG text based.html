@@ -231,22 +231,27 @@ else ("You didn't choose one of the options, oh well.");
 
     //Swamp outcome
     var moments = (outcome == 3)
-    var swamp = prompt("Oh no you landed in the foggy swamp crawling with foes, do you charge in or sneak past it?")
-    if (swamp == "Sneak");{
+      var swamp = prompt("Oh no you landed in the foggy swamp crawling with foes, do you charge in or sneak past it?")
+      if (swamp == "Sneak");
         var sneak = Math.floor(Math.random()*100)
-        if (sneak <=100)
-        var swampfight1 = alert("You dident sneak past the swamp creatures they heard you. and they are charging you for a fight!")
-    combatScenario();
-    if(sneak => 50)
-    var sneaking = alert("You sucessfully went past the swamp creatures")}
-    if (swamp == "charge")
-    var charge = Math.floor(Math.random()*200)
-    if(charge => 150)
-    var criticalhit = alert("Well done, Your charge did a critical hit on your foe killing them in one swipe")
-    if(charge <= 150)
-    var lowerchance = alert("Well you dident get lucky this time, Be ready for combat")
-    combatScenario();
-   
+        if (sneak <= 100)
+          var swampfight1 = alert("You didn't sneak past the swamp creatures they heard you. and they are charging you for a fight!")
+          combatScenario();
+        if (sneak >= 50)
+          var sneaking = alert("You successfully went past the swamp creatures")
+       //Swamp outcome
+      var moments = (outcome == 3);
+      if (swamp == "Sneak") {
+        var sneak = Math.floor(Math.random()*100)
+        if (sneak <= 100)
+          var swampfight1 = alert("You didn't sneak past the swamp creatures they heard you. and they are charging you for a fight!")
+          combatScenario();
+        if (sneak >= 50)
+          var sneaking = alert("You successfully went past the swamp creatures")
+      } else if (swamp == "charge") {
+        var charge = Math.floor(Math.random()*200)
+        if (charge >= 150)
+          // code to execute
 
     //Chapters and true/false if its possible to be done before december 10th otherwise remove,
 
@@ -257,34 +262,23 @@ if (path4 == "right")
 var randomoutcomes = Math.floor();
 var max = 3
 var bridgeway = (randomoutcomes*max)
-if (bridgeway == 1);
+if (bridgeway == 1);{
 alert("You walked in to a dungeon filled with skeletons ready for a fight")
 combatScenario();
-alert("thanks for playing my game")
+alert("thanks for playing my game")}
 
 //what could have been done
 //a pit of spikes = death, if (lifenecklace = true) = var saved ("You flash up before going that way as you survived death but your necklace vanished returning to the bridge again") (return impement)
 //if (lifenecklace = false), var death = prompt("you fell in to a pit of spikes dieing instently")
 
-if (bridgeway == 2);
+if (bridgeway == 2);{
 var ending = alert("you went through several paths slayed several foes and finally reached your ending point, Thanks for playing my adventure")
-
-if(bridgeway == 3);
+}
+if(bridgeway == 3);{
 alert("you walked in to the biggest tresure room with so much tresure")
 treasureScenario();
-alert("thanks for playing my game, ")
+alert("thanks for playing my game, ")}
 
 
-
-
-
-
-
-
-
-
-   </script>
-
-
-
-
+}
+</script>
