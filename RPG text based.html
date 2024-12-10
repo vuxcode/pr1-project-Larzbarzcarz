@@ -85,8 +85,8 @@
   // Treasure Scenario Function
     // Handles the treasure scenario, including options to loot or sneak away, with risks like traps, damage, or enemy encounters.
     function treasureScenario() {
-        var choice = prompt("Do you want to loot the treasure or sneak away? (loot/sneak)").toLowerCase();
-        if (choice === "loot") {
+       } var choice = prompt("Do you want to loot the treasure or sneak away? (loot/sneak)"). 
+        if (choice === "loot") ;{;
             var outcome = Math.floor(Math.random() * 100) + 1;
             if (outcome <= 20) {
                 alert("As you try to loot, a trap activates and you take massive damage! You die instantly.<br>");
@@ -100,12 +100,11 @@
                 alert("As you try to loot, a group of skeletons suddenly emerges to protect their treasure!<br>");
                 combatScenario();
             }
-        } else if (choice === "sneak") {
+        } if (choice === "sneak") ;{
             alert("You decided to sneak away quietly, leaving the treasure behind.<br>");
-        } else {
-            alert("Invalid choice. You hesitate, and decide to leave the treasure behind.<br>");
-        }
-    }
+            elseif (choice === null || choice === undefined) ;{ 
+            alert("You didn't make a choice. Please try again.<br>");}
+    
 
     
     
@@ -158,7 +157,7 @@
     
     // Direction after first combat.
     var path1 = prompt("Where are you gonna go now? left or right?")
-    if (path1 == "right"){
+    if (path1 == "right")
     if (path1 == "left")
     var random = Math.random ()
     var max = 3
@@ -206,10 +205,10 @@ else ("You didn't choose one of the options, oh well.");
 //Chapter 3
 
     //secound path
-    var path2 = ("What direction do you wanna take now? left or right?");{
+    var path2 = ("What direction do you wanna take now? left or right?");
     (path2 == "left");
     (path2 == "right");
-     }   
+        
     var random = Math.random ();
     var max = 3
     var outcome = (max*random)
@@ -248,7 +247,7 @@ else ("You didn't choose one of the options, oh well.");
           combatScenario();
         if (sneak >= 50)
           var sneaking = alert("You successfully went past the swamp creatures")
-      } else if (swamp == "charge") {
+      } else if (swamp == "charge") 
         var charge = Math.floor(Math.random()*200)
         if (charge >= 150)
           // code to execute
@@ -280,5 +279,5 @@ treasureScenario();
 alert("thanks for playing my game, ")}
 
 
-}
+
 </script>
