@@ -33,7 +33,7 @@
         var enemyHp =  Math.floor(Math.random() * 50) + 20; // Random enemy HP for variety 
         
         while (hp > 0 && enemyHp > 0) {
-            var action = prompt("You've encountered an enemy! What will you do? (fight/run)").toLowerCase();
+            var action = prompt("You've encountered an enemy! What will you do? (fight/run)")toLowerCase();
             if (action === "run") {
                 var escapeChance = Math.floor(Math.random() * 100) + 1;
                 if (escapeChance > 30) {
