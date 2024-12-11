@@ -1,10 +1,10 @@
 <script>
-    // starting point
+    /* starting point*/
     var role = prompt("Welcome to your adventure, to explore these lands. And what are you? A Wizard?, A knight?, A rouge?");
     
-    // The user chooses there class
+    /* The user chooses there class*/
     var rpgclass = ["WIZARD", "KNIGHT", "ROUGE",];
-    //solving the uppercase scenario
+    /*solving the uppercase scenario*/
     var rpgclass0 = rpgclass[0];
     var rpgclass1 = rpgclass[1];
     var rpgclass2 = rpgclass[2];
@@ -26,8 +26,8 @@
     
     console.log(role.toUpperCase()); 
     
-  // Combat Function
-    // Handles the combat sequence with enemies, including randomized enemy HP, fighting, and running actions.
+  /*Combat Function*/
+    /* Handles the combat sequence with enemies, including randomized enemy HP, fighting, and running actions.*/
     function combatScenario() {
         var hp = 100;
         var enemyHp =  Math.floor(Math.random() * 50) + 20; // Random enemy HP for variety 
@@ -38,7 +38,7 @@
                 var escapeChance = Math.floor(Math.random() * 100) + 1;
                 if (escapeChance > 30) {
                     alert("You've decided to run, and you manage to escape!<br>");
-                    return; // Successfully escape
+                    return; /* Successfully escape*/
                 } else {
                     alert("You tried to run, but the enemy caught up!<br>");
                 }
@@ -70,10 +70,10 @@
                 alert("You took " + damage + " damage! Your HP: " + hp + "<br>");
             }
 
-            // Check if combat should continue
+            /* Check if combat should continue*/
             if (enemyHp <= 0) {
                 alert("You've defeated the enemy! Congratulations!<br>");
-                // Call findTreasure function after defeating the enemy
+                /* Call findTreasure function after defeating the enemy*/
                 return; // Continue the adventure after defeating the enemy
             } else if (hp <= 0) {
                 alert("You've died. Try again next time!<br>");
@@ -82,11 +82,11 @@
         }
     }
 
-  // Treasure Scenario Function
-    // Handles the treasure scenario, including options to loot or sneak away, with risks like traps, damage, or enemy encounters.
+  /*Treasure Scenario Function*/
+    /* Handles the treasure scenario, including options to loot or sneak away, with risks like traps, damage, or enemy encounters.*/
     function treasureScenario() {
        } var choice = prompt("Do you want to loot the treasure or sneak away? (loot/sneak)"). 
-        if (choice === "loot") ;{;
+        if (choice === "loot") 
             var outcome = Math.floor(Math.random() * 100) + 1;
             if (outcome <= 20) {
                 alert("As you try to loot, a trap activates and you take massive damage! You die instantly.<br>");
@@ -100,7 +100,7 @@
                 alert("As you try to loot, a group of skeletons suddenly emerges to protect their treasure!<br>");
                 combatScenario();
             }
-        } if (choice === "sneak") ;{
+        if (choice === "sneak") ;
             alert("You decided to sneak away quietly, leaving the treasure behind.<br>");
             elseif (choice === null || choice === undefined) ;{ 
             alert("You didn't make a choice. Please try again.<br>");}
@@ -149,20 +149,20 @@
                 alert("You didn't choose one of the options, oh well.");
                
              }
-    // END THE FUNCTION HERE!
-        //if (hp <= 0){
-            //alert("You've died, try again next time!");
+    /* END THE FUNCTION HERE!*/
+        /*if (hp <= 0){*/
+            /*alert("You've died, try again next time!");*/
     
         
     
-    // Direction after first combat.
+    /* Direction after first combat.
     var path1 = prompt("Where are you gonna go now? left or right?")
     if (path1 == "right")
     if (path1 == "left")
     var random = Math.random ()
     var max = 3
     var outcome = Math.floor(max*random)}
-    //else(Return (path1));{
+    /*else(Return (path1));{*/
     
     
     
@@ -179,7 +179,7 @@
         
         if (outcome == 3);
         alert ("You walked in to a room filled with tresure are you gonna loot it or sneak away");}
-        // a small possible combat scenario with tresure guardians
+        /* a small possible combat scenario with tresure guardians*/
         if ("loot")
         var random = Math.random();
         var max = 100
@@ -199,12 +199,12 @@ else ("You didn't choose one of the options, oh well.");
                         
     
     
-// chapters = [1,2,3,4] with a true/false on the combat/run options
+/* chapters = [1,2,3,4] with a true/false on the combat/run options*/
 
 
-//Chapter 3
+/*Chapter 3*/
 
-    //secound path
+    /*secound path*/
     var path2 = ("What direction do you wanna take now? left or right?");
     (path2 == "left");
     (path2 == "right");
@@ -216,19 +216,19 @@ else ("You didn't choose one of the options, oh well.");
     var moments = (outcome == 1)
     var testing = prompt("You ran in to a group of goblins, time for another fight")
     combatScenario();
-    //Combat 
+    /*Combat*/
  
     var moments = (outcome == 2)
-    //tresure
+    /*tresure/*
     var goldenloot = prompt ("You found the biggest tresuure room are you gonna loot it or run away?")
     if(goldenloot == "loot")
     treasureScenario();
-    //if (Chapter [1,2] =false)
-    //var dragonnecklace = prompt("You find a shiny necklace in the tresure pile do you take it or not?")
-    //dragonnecklace = (true)
-    //if chapter [1,2] = true var lifenecklace = prompt ("you find a green glowing necklace do you take it or not?") lifenecklace = true
+    /*if (Chapter [1,2] =false)*/
+    /*var dragonnecklace = prompt("You find a shiny necklace in the tresure pile do you take it or not?")*/
+    /*dragonnecklace = (true)*/
+    /*if chapter [1,2] = true var lifenecklace = prompt ("you find a green glowing necklace do you take it or not?") lifenecklace = true*/
 
-    //Swamp outcome
+    /*Swamp outcome*/
     var moments = (outcome == 3)
       var swamp = prompt("Oh no you landed in the foggy swamp crawling with foes, do you charge in or sneak past it?")
       if (swamp == "Sneak");
@@ -238,7 +238,7 @@ else ("You didn't choose one of the options, oh well.");
           combatScenario();
         if (sneak >= 50)
           var sneaking = alert("You successfully went past the swamp creatures")
-       //Swamp outcome
+       /*Swamp outcome*/
       var moments = (outcome == 3);
       if (swamp == "Sneak") {
         var sneak = Math.floor(Math.random()*100)
@@ -250,11 +250,11 @@ else ("You didn't choose one of the options, oh well.");
       } else if (swamp == "charge") 
         var charge = Math.floor(Math.random()*200)
         if (charge >= 150)
-          // code to execute
+          // code to execute*/
 
-    //Chapters and true/false if its possible to be done before december 10th otherwise remove,
+    /*Chapters and true/false if its possible to be done before december 10th otherwise remove,*/
 
-//Chapter 4
+/*Chapter 4*/
 var path4 = prompt("you walk in to a old acient tomb that has one massive bridge that only have 2 directions right or left?")
 if (path4 == "left");
 if (path4 == "right")
@@ -266,9 +266,9 @@ alert("You walked in to a dungeon filled with skeletons ready for a fight")
 combatScenario();
 alert("thanks for playing my game")}
 
-//what could have been done
-//a pit of spikes = death, if (lifenecklace = true) = var saved ("You flash up before going that way as you survived death but your necklace vanished returning to the bridge again") (return impement)
-//if (lifenecklace = false), var death = prompt("you fell in to a pit of spikes dieing instently")
+/*what could have been done*/
+/*a pit of spikes = death, if (lifenecklace = true) = var saved ("You flash up before going that way as you survived death but your necklace vanished returning to the bridge again") (return impement)*/
+/*if (lifenecklace = false), var death = prompt("you fell in to a pit of spikes dieing instently")*/
 
 if (bridgeway == 2);{
 var ending = alert("you went through several paths slayed several foes and finally reached your ending point, Thanks for playing my adventure")
